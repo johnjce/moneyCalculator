@@ -10,7 +10,8 @@ public class ExchangeRateLoader {
     private CurrencySet currencySet;
 
     public ExchangeRateLoader (Exchange exchange, CurrencySet currencySet) {
-    
+        this.exchange = exchange;
+        this.currencySet = currencySet;
     }  
     
     public Exchange getExchange() {
