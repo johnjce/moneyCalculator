@@ -2,7 +2,7 @@ package model;
 
 public class Currency {
     
-    private String name, symbol, code;
+    private final String name, symbol, code;
     
     public Currency(String name, String symbol, String code) {
         this.name = name;

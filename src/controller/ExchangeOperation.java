@@ -24,11 +24,13 @@ public class ExchangeOperation {
     }
     
     private MoneyDisplay showMoneyDisplay (Money money) {
-        return new MoneyDisplay(money);
+        //return new MoneyDisplay(money);
+        return null;
     }
     
     private ExchangeDialog showExchangeDialog () {
-        return new ExchangeDialog(currencySet);
+        //return new ExchangeDialog(currencySet);
+        return null;
     }
     
     private Exchanger executeExchanger (ExchangeRateLoader exchangeRateLoader) {

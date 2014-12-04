@@ -4,25 +4,20 @@ import java.util.Date;
 
 public class Exchange {
     
-    private Money money;
-    private Currency [] currency;
-    private Date date;
+    private final Money money;
+    private final Currency currency;
 
-    public Exchange(Money money, Currency[] currency, Date date) {
+    public Exchange(Money money, Currency currency) {
         this.money = money;
         this.currency = currency;
-        this.date = date;
     }
     
     public Money getMoney() {
         return money;
     }
 
-    public Currency[] getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
 
-    public Date getDate() {
-        return date;
-    }
 }
