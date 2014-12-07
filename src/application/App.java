@@ -8,7 +8,7 @@ import views.ui.implementation.swing.ApplicationFrame;
 
 public class App {   
     public static void main (String args []) {     
-        CurrencySet currencySet = new views.persistence.implementation.CurrencySetLoader().load();
+        CurrencySet currencySet = new views.persistence.implementation.sqlite.CurrencySetLoader().load();
         ApplicationFrame frame = new ApplicationFrame(currencySet.toArray());
         frame.register(new ActionListener() {
             @Override
