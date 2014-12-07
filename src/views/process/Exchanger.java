@@ -9,13 +9,16 @@ public class Exchanger {
     
     private Currency currency;
     private Money money;
+    private ExchangeRate exchangeRate;
     
-    public Exchanger (ExchangeRate exchangeRate) {
-        
+    public Exchanger (Money money, Currency currency, ExchangeRate exchangeRate) {
+        this.money=money;
+        this.currency=currency;
+        this.exchangeRate=exchangeRate;
     }
     
     public Money execute () {
-        return null;
+        return new Money(money.getAmount()*exchangeRate.getValue(), exchangeRate.getOut());
     }
     
 }

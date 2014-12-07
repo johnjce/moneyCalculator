@@ -14,6 +14,11 @@ public class ApplicationFrame extends JFrame {
     private final Currency[] currencies;
     private ActionListener actionListener;
     private ExchangeDialog exchangeDialog;
+    private ExchangeDisplay exchangeDisplay;
+
+    public ExchangeDisplay getExchangeDisplay() {
+        return exchangeDisplay;
+    }
     
     public ApplicationFrame (Currency [] currencies) {
         this.currencies = currencies;
@@ -34,7 +39,8 @@ public class ApplicationFrame extends JFrame {
     
     private void createWidgets() {
         this.add(createCalculateButton(), BorderLayout.SOUTH);
-        this.add(createExchangeDialogPanel());
+        this.add(createExchangeDisplay(), BorderLayout.CENTER);
+        this.add(createExchangeDialogPanel(), BorderLayout.NORTH);
     }
 
     private Component createExchangeDialogPanel() {
@@ -52,6 +58,11 @@ public class ApplicationFrame extends JFrame {
             }
         });
         return button;
+    }
+
+    private Component createExchangeDisplay() {
+        exchangeDisplay = new ExchangeDisplay();
+        return exchangeDisplay;
     }
     
 }

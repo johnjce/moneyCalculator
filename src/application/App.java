@@ -13,7 +13,7 @@ public class App {
         frame.register(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ExchangeOperation(currencySet, frame.getExchangeDialog(), new views.ui.implementation.swing.ExchangeDisplay()).execute();
+                new ExchangeOperation(currencySet, frame.getExchangeDialog(), frame.getExchangeDisplay()).execute();
             }
         });
     }
