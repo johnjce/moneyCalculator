@@ -3,7 +3,7 @@ package views.ui;
 
 import model.Money;
 
-public interface MoneyDisplay {
+public interface ExchangeDisplay {
     
     public void display (Money money);
   

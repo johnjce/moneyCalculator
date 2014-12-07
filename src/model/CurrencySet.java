@@ -20,6 +20,6 @@ public class CurrencySet {
     }
     
     public Currency [] toArray () {
-        return null;
+        return currencyList.toArray(new Currency [currencyList.size()]);
     }
 }

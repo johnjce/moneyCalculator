@@ -1,12 +1,13 @@
-package swing.ExchangeDialog;
+package swing;
 
 import javax.swing.JComboBox;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import model.Currency;
 import model.Exchange;
 import model.Money;
 
-public class ExchangeDialog implements views.ui.ExchangeDialog {
+public class ExchangeDialog extends JPanel implements views.ui.ExchangeDialog{
 
     private final Currency [] currencySet;
     private JComboBox<Currency> fromCurrency;
@@ -56,7 +57,7 @@ public class ExchangeDialog implements views.ui.ExchangeDialog {
     
     
     private JComboBox<Currency> createFromCurrency () {
-        fromCurrency = new JComboBox<>(currencySet);
+        fromCurrency = new JComboBox<Currency>(currencySet);
         return fromCurrency;
     }
     
@@ -66,7 +67,7 @@ public class ExchangeDialog implements views.ui.ExchangeDialog {
     }
     
     private JComboBox<Currency> createToCurrency () {
-        toCurrency = new JComboBox<>(currencySet);
+        toCurrency = new JComboBox<Currency>(currencySet);
         return toCurrency;
     }
 

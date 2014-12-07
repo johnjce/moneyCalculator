@@ -6,7 +6,7 @@ import model.Money;
 import views.persistence.ExchangeRateLoader;
 import views.process.Exchanger;
 import views.ui.ExchangeDialog;
-import views.ui.MoneyDisplay;
+import views.ui.ExchangeDisplay;
 
 public class ExchangeOperation {
     
@@ -20,10 +20,10 @@ public class ExchangeOperation {
         ExchangeDialog exchangeDiag = showExchangeDialog();
         ExchangeRateLoader exchangeRateLoader = getExchangeRateLoader(exchangeDiag);
         Exchanger exchanger = executeExchanger(exchangeRateLoader);
-        MoneyDisplay moneyDisplay = showMoneyDisplay(exchanger.execute());
+        ExchangeDisplay moneyDisplay = showMoneyDisplay(exchanger.execute());
     }
     
-    private MoneyDisplay showMoneyDisplay (Money money) {
+    private ExchangeDisplay showMoneyDisplay (Money money) {
         //return new MoneyDisplay(money);
         return null;
     }
