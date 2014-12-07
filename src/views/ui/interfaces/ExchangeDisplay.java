@@ -1,5 +1,5 @@
 
-package views.ui;
+package views.ui.interfaces;
 
 import model.Money;
 

@@ -1,4 +1,4 @@
-package views.persistence;
+package views.persistence.interfaces;
 
 import model.CurrencySet;
 

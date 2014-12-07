@@ -1,18 +1,17 @@
 package controller;
 
 import model.CurrencySet;
-import model.Exchange;
 import model.Money;
-import views.persistence.ExchangeRateLoader;
+import views.persistence.implementation.ExchangeRateLoader;
 import views.process.Exchanger;
-import views.ui.ExchangeDialog;
-import views.ui.ExchangeDisplay;
+import views.ui.interfaces.ExchangeDialog;
+import views.ui.interfaces.ExchangeDisplay;
 
 public class ExchangeOperation {
     
     private CurrencySet currencySet;
     
-    public ExchangeOperation(CurrencySet currencySet) {
+    public ExchangeOperation(CurrencySet currencySet, ExchangeDialog exchangeDialog, ExchangeDisplay exchangeDiplay) {
         this.currencySet = currencySet;
     }
     

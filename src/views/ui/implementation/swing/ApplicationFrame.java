@@ -1,7 +1,8 @@
-package swing;
+package views.ui.implementation.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -17,6 +18,7 @@ public class ApplicationFrame extends JFrame {
     public ApplicationFrame (Currency [] currencies) {
         this.currencies = currencies;
         setTitle("Money Calculator");
+        setMinimumSize(new Dimension(300, 300));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         createWidgets();
         setVisible(true);
