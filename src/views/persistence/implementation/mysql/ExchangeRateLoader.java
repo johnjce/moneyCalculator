@@ -1,12 +1,5 @@
-package views.persistence.implementation.sqlite;
+package views.persistence.implementation.mysql;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import model.Currency;
 import model.CurrencySet;
 import model.Exchange;
 import model.ExchangeRate;
@@ -31,13 +24,6 @@ public class ExchangeRateLoader implements views.persistence.interfaces.Exchange
     
     @Override
     public ExchangeRate load () {
-        
-        try {
-            Class.forName("org.sqlite.JDBC");
-            Connection c = DriverManager.getConnection("jdbc:sqlite:exchangerates.db");
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(CurrencySetLoader.class.getName()).log(Level.SEVERE, null, ex);
-        }
         return null;
     }
 }
