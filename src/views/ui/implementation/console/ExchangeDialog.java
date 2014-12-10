@@ -13,19 +13,19 @@ public class ExchangeDialog implements views.ui.interfaces.ExchangeDialog {
         System.out.println("Amount money in : ");
         double amountIN = scanner.nextDouble();
         System.out.println("Currency IN: ");
-        Currency currencyIN = getCurrency(scanner.nextInt());
+        Currency currencyIN = getCurrency(scanner);
         System.out.println("Amount money out : ");
         double amountOut = scanner.nextDouble();
         System.out.println("Currency OUT: ");
-        Currency currencyOUT = getCurrency(scanner.nextInt());
+        Currency currencyOUT = getCurrency(scanner);
         return new Exchange(new Money(amountIN, currencyIN), currencyOUT);
     }
     
-    private Currency getCurrency (int ID) {
+    private Currency getCurrency (Scanner scanner) {
         System.out.println("€ : 0");
         System.out.println("$ : 1");
         System.out.println("£ : 2");
-        switch (ID) {
+        switch (scanner.nextInt()) {
             case 0:
                 return new Currency("","","");
             case 1:

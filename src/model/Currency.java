@@ -22,6 +22,7 @@ public class Currency {
         return code;
     }
     
+    @Override
     public String toString () {
         return this.symbol;
     }
