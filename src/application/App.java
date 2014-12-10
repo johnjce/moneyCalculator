@@ -9,9 +9,7 @@ import views.ui.implementation.swing.ApplicationFrame;
 
 public class App {   
     public static void main (String args []) {     
-        CurrencySet currencySet = new views.persistence.implementation.sqlite.CurrencySetLoader().load();
-        SwingMODE(currencySet);
-        //ConsoleMODE(currencySet);
+        SwingMODE(new views.persistence.implementation.provider.CurrencySetLoader().load());
     }
     
     private static void SwingMODE (CurrencySet currencySet) {

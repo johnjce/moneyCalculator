@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.CurrencySet;
@@ -36,9 +37,9 @@ public class ExchangeRateLoader implements views.persistence.interfaces.Exchange
     @Override
     public ExchangeRate load () {    
         try {
-            URLConnection provider = new URL(googleProvider+"from="+exchange.getMoney().getCurrency().getSymbol()+"&to="+exchange.getCurrency().getSymbol()).openConnection();
+            URLConnection provider = new URL(googleProvider+"from="+exchange.getMoney().getCurrency().getCode()+"&to="+exchange.getCurrency().getCode()).openConnection();
             BufferedReader exchangeRateInfo = new BufferedReader(new InputStreamReader(provider.getInputStream()));
-            System.out.println(exchangeRateInfo.readLine());
+            return new ExchangeRate(exchange.getMoney().getCurrency(), exchange.getCurrency(), Double.parseDouble(exchangeRateInfo.readLine().split(",")[1].substring(9)), new Date());
         } catch (MalformedURLException ex) {
             Logger.getLogger(ExchangeRateLoader.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
