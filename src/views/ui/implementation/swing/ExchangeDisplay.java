@@ -11,7 +11,7 @@ public class ExchangeDisplay extends JLabel implements views.ui.interfaces.Excha
     
     @Override
     public void display(Money money) {
-        this.setText(money.getAmount()+" "+money.getCurrency().getSymbol());
+        this.setText(" The result is : "+money.getAmount()+" "+money.getCurrency().getSymbol());
     }
     
 }

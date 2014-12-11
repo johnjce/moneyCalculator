@@ -57,7 +57,11 @@ public class ExchangeDialog extends JPanel implements views.ui.interfaces.Exchan
     }
 
     private double getAmount() {
-        return Double.parseDouble(amount.getText());
+        try {
+            return Double.parseDouble(amount.getText());
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 
     private Currency getCurrency(JComboBox<Currency> comboBox) {

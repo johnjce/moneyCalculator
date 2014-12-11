@@ -9,7 +9,7 @@ import views.ui.implementation.swing.ApplicationFrame;
 
 public class App {   
     public static void main (String args []) {     
-        SwingMODE(new views.persistence.implementation.provider.CurrencySetLoader().load());
+        SwingMODE(new views.persistence.implementation.test.CurrencySetLoader().load());
     }
     
     private static void SwingMODE (CurrencySet currencySet) {

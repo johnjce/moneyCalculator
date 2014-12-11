@@ -14,7 +14,8 @@ public class CurrencySetLoader implements views.persistence.interfaces.CurrencyS
         CurrencySet currencySet = new CurrencySet ();
         try {
             Class.forName("org.sqlite.JDBC");
-            Connection c = DriverManager.getConnection("jdbc:sqlite:currencies.db");
+            Connection c = DriverManager.getConnection("jdbc:sqlite:moneycalculator.db");
+            
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(CurrencySetLoader.class.getName()).log(Level.SEVERE, null, ex);
         }
