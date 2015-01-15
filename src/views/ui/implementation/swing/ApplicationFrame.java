@@ -23,7 +23,7 @@ public class ApplicationFrame extends JFrame {
     public ApplicationFrame (Currency [] currencies) {
         this.currencies = currencies;
         setTitle("Money Calculator");
-        setMinimumSize(new Dimension(250, 140));
+        setMinimumSize(new Dimension(300, 180));
         setResizable(false);
         setLocation(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

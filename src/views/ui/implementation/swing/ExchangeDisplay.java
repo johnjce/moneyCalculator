@@ -11,6 +11,7 @@ public class ExchangeDisplay extends JPanel implements views.ui.interfaces.Excha
     
     public ExchangeDisplay () {
         super();
+        this.add(label);
         this.setBorder(BorderFactory.createTitledBorder("Exchange Display"));
     }
     
