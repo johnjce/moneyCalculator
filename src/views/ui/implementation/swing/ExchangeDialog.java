@@ -2,6 +2,7 @@ package views.ui.implementation.swing;
 
 import java.awt.Component;
 import java.awt.FlowLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
@@ -18,6 +19,7 @@ public class ExchangeDialog extends JPanel implements views.ui.interfaces.Exchan
     private Currency[] currencies;
 
     public ExchangeDialog (Currency[] currencies) {
+        this.setBorder(BorderFactory.createTitledBorder("Exchange Dialog"));
         this.currencies = currencies;
         this.setLayout(new FlowLayout());
         this.createWidgets();
