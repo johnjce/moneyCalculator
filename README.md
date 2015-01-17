@@ -12,3 +12,7 @@ Las distintas implementaciones son:
       * Implementación de un proveedor vía Web
       * Implementación MOCK
 
+De la misma forma existen varias implementaciones referentes a la interfaz de usuario:
+
+     * Swing
+     * Consola
