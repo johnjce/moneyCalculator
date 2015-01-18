@@ -15,4 +15,3 @@ De la misma forma existen varias implementaciones referentes a la interfaz de us
      * SWING
      * CONSOLA
 
-Nota: Existen módulos que no están implementados aún. Por ejemplo, la implementación PROVEEDOR_WEB del CurrencySetLoader no se puede porque no se ha podido encontrar ninguna web que te provea de las Currencies.
