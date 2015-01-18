@@ -9,13 +9,13 @@ import views.process.Exchanger;
 import views.ui.interfaces.ExchangeDialog;
 import views.ui.interfaces.ExchangeDisplay;
 
-public class ExchangeOperation implements Command {
+public class ExchangeCommand implements Command {
     
     private CurrencySet currencySet;
     private ExchangeDialog exchangeDialog;
     private ExchangeDisplay exchangeDisplay;
     
-    public ExchangeOperation(CurrencySet currencySet, ExchangeDialog exchangeDialog, ExchangeDisplay exchangeDisplay) {
+    public ExchangeCommand(CurrencySet currencySet, ExchangeDialog exchangeDialog, ExchangeDisplay exchangeDisplay) {
         this.exchangeDialog = exchangeDialog;
         this.exchangeDisplay = exchangeDisplay;
         this.currencySet = currencySet;

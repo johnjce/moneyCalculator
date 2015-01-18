@@ -1,6 +1,6 @@
 package application;
 
-import controller.ExchangeOperation;
+import controller.ExchangeCommand;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import model.CurrencySet;
@@ -17,12 +17,12 @@ public class App {
         frame.register(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ExchangeOperation(currencySet, frame.getExchangeDialog(), frame.getExchangeDisplay()).execute();
+                new ExchangeCommand(currencySet, frame.getExchangeDialog(), frame.getExchangeDisplay()).execute();
             }
         });
     }
     
     private static void ConsoleMODE (CurrencySet currencySet) {
-        new ExchangeOperation(currencySet, new ExchangeDialog(), new ExchangeDisplay()).execute();
+        new ExchangeCommand(currencySet, new ExchangeDialog(), new ExchangeDisplay()).execute();
     }
 }
