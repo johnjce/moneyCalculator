@@ -1,4 +1,4 @@
-package views.persistence.implementation.oracle;
+package views.persistence.implementation.webprovider;
 
 import model.CurrencySet;
 

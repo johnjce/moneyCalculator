@@ -1,5 +1,6 @@
-package views.persistence.implementation.oracle;
+package views.persistence.implementation.mock;
 
+import java.util.Date;
 import model.CurrencySet;
 import model.Exchange;
 import model.ExchangeRate;
@@ -23,7 +24,7 @@ public class ExchangeRateLoader implements views.persistence.interfaces.Exchange
     }      
     
     @Override
-    public ExchangeRate load () {
-        return null;
+    public ExchangeRate load () {    
+        return new ExchangeRate(exchange.getMoney().getCurrency(), exchange.getCurrency(), 0.00012, new Date());
     }
 }

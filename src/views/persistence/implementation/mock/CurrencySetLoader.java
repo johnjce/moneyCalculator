@@ -1,4 +1,4 @@
-package views.persistence.implementation.test;
+package views.persistence.implementation.mock;
 
 import model.Currency;
 import model.CurrencySet;

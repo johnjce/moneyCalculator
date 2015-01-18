@@ -1,4 +1,4 @@
-package views.persistence.implementation.provider;
+package views.persistence.implementation.webprovider;
 
 import java.io.BufferedReader;
 import java.io.IOException;

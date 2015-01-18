@@ -4,7 +4,7 @@ import model.CurrencySet;
 import model.Exchange;
 import model.ExchangeRate;
 import model.Money;
-import views.persistence.implementation.provider.ExchangeRateLoader;
+import views.persistence.implementation.webprovider.ExchangeRateLoader;
 import views.process.Exchanger;
 import views.ui.interfaces.ExchangeDialog;
 import views.ui.interfaces.ExchangeDisplay;
