@@ -6,13 +6,13 @@ Esta modularidad viene reflejada en distintas implementaciones de un mismo módu
 
 Las distintas implementaciones son:
 
-      * Implementación en SQLlite
-      * Implementación en Oracle
-      * Implementación en MySQL
-      * Implementación de un proveedor vía Web
+      * Implementación en SQLITE
+      * Implementación de un PROVEEDOR_WEB
       * Implementación MOCK
 
 De la misma forma existen varias implementaciones referentes a la interfaz de usuario:
 
-     * Swing
-     * Consola
+     * SWING
+     * CONSOLA
+
+Nota: Existen módulos que no están implementados aún. Por ejemplo, la implementación PROVEEDOR_WEB del CurrencySetLoader no se puede porque no se ha podido encontrar ninguna web que te provea de las Currencies.
