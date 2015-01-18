@@ -9,7 +9,7 @@ import views.process.Exchanger;
 import views.ui.interfaces.ExchangeDialog;
 import views.ui.interfaces.ExchangeDisplay;
 
-public class ExchangeOperation {
+public class ExchangeOperation implements Command {
     
     private CurrencySet currencySet;
     private ExchangeDialog exchangeDialog;
@@ -21,6 +21,7 @@ public class ExchangeOperation {
         this.currencySet = currencySet;
     }
     
+    @Override
     public void execute () {      
         Exchange exchange = exchangeDialog.getExchange();
         ExchangeRate exchangeRate = new ExchangeRateLoader(exchange, currencySet).load();
